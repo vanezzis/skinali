@@ -64,9 +64,11 @@
   background-color: #4285f4;
   color: #fff;
   transform: translateY(-200%);
+  opacity: 0;
 }
 .menu_active {
   transform: translateY(0);
+  opacity: 1;
 }
 .menu__nav {
   display: flex;
@@ -180,10 +182,11 @@ body {
   }
 }
 .main {
-  background: #f1f1f1 url("../img/main-bg.jpg") no-repeat center top 80px;
-  background-size: contain;
-  padding-top: 180px;
+  background: #f1f1f1 url("../img/main-bg.jpg") no-repeat center top;
+  background-size: cover;
+  padding-top: 120px;
   padding-bottom: 270px;
+  margin-top: 80px;
 }
 .main__title {
   font-size: 30px;
@@ -198,7 +201,7 @@ body {
 
 @media (max-width: 991px) {
   .main {
-    background-size: cover;
-    background-position: top left 30%;
+    background-size: 100%;
+    background-position: top right;
   }
 }/*# sourceMappingURL=style.css.map */
