@@ -181,18 +181,18 @@ body {
     font-size: 10px;
   }
 }
-.main {
+.hero {
   background: #f1f1f1 url("../img/main-bg.jpg") no-repeat center top;
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 270px;
   margin-top: 80px;
 }
-.main__title {
+.hero__title {
   font-size: 30px;
   margin-bottom: 40px;
 }
-.main__subtitle {
+.hero__subtitle {
   display: block;
   margin-bottom: 67px;
   font-size: 30px;
@@ -200,7 +200,7 @@ body {
 }
 
 @media (max-width: 991px) {
-  .main {
+  .hero {
     background-size: 100%;
     background-position: top right;
   }
