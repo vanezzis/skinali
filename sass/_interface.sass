@@ -1,6 +1,8 @@
 body
   +light
   color: #262626
+img
+  max-width: 100%
 .section
   padding: 100px 0
   &-title
@@ -18,6 +20,7 @@ body
   font-family: Proxima Nova Semibold, sans-serif
   color:#4285f4
   background-color: #fff
+  text-decoration: none
 .button
   border: none
   text-transform: uppercase
@@ -25,6 +28,20 @@ body
   background-color: #4285f4
   color: #fff
   font-family: Proxima Nova Semibold, sans-serif
+  text-decoration: none
+  &-fitting
+    padding: 10px
+    text-transform: uppercase
+    color:#507fe1
+    background-color: #fff
+  &-add
+    background-color: lighten(#507fe1, 10%)
+    color: #fff
+  &-like
+    background-color: #507fe1
+    height: 30px
+    width: 30px
+    border: none
 .bg-secondary
   background: #f1f1f1
 .input
