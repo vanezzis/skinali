@@ -1,0 +1,64 @@
+.offer
+  padding: 129px 0
+  &-block
+    background: #fff url('../img/offer-bg.jpg') no-repeat center right
+    background-size: contain
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1)
+    padding: 80px
+    margin-top: -235px
+  &__title
+    font-size: 25px
+    text-transform: uppercase
+    font-family: Proxima Nova Semibold, sans-serif
+    margin-bottom: 20px
+  &__subtitle
+    display: block
+    font-size: 21px
+    margin-bottom: 48px
+.form
+  &__row
+    display: flex
+    align-items: center
+    max-width: 900px
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+  &__label
+    display: block
+    font-size: 17px
+    margin-bottom: 15px
+  &__group
+    flex-basis: 33.3%
+  &__input
+    width: 100%
+    border-right-width: 0px
+    &:last-child
+      border-right-width: 1px
+  &__button
+    height: 80px
+    width: 100%
+@media (max-width: 1199px)
+  .offer
+    &-block
+      background-position: center right -120px
+@media (max-width: 768px)
+  .offer
+    padding: 30px
+    &__title
+      font-size: 16px
+    &__subtitle
+      font-size: 16px
+    &-block
+      background: none
+      background-color: #fff
+      padding: 40px
+  .form
+    &__row
+      flex-direction: column
+      &-checkbox
+        flex-direction: row
+    &__group
+      flex-basis: 100%
+      width: 100%
+    &__input
+      margin-bottom: 20px
