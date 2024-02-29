@@ -6,6 +6,7 @@
     <title>Фабрика скинали</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/twentytwenty.css" />
   </head>
   <body>
     <header class="header">
@@ -59,9 +60,9 @@
               >
             </div>
             <!-- /.navbar__mobile -->
-            <button class="button-o navbar__button">
+            <a href="#offer" class="button-o navbar__button">
               получить консультацию
-            </button>
+            </a>
           </div>
           <!-- /.navbar-wrap -->
         </div>
@@ -74,7 +75,7 @@
             Гарантия <br />минимальной цены <br />на скинали
           </h1>
           <span class="hero__subtitle">от 3 000 р/м2</span>
-          <button class="button hero__button">Заказать скинали</button>
+          <a href="#offer" class="button hero__button">Заказать скинали</a>
         </div>
         <!-- /.container -->
       </div>
@@ -82,7 +83,7 @@
     </header>
     <!-- /.header -->
     <main>
-      <section class="offer bg-secondary">
+      <section class="offer bg-secondary" id="offer">
         <div class="container">
           <div class="offer__block offer-block offer-block_calc-bg">
             <h2 class="offer__title">Оставьте заявку на расчёт</h2>
@@ -94,15 +95,31 @@
               <div class="form__row">
                 <div class="form__group">
                   <lable class="form__label">Вид стекла</lable>
-                  <input type="text" class="input form__input" />
+                  <input
+                    type="hidden"
+                    name="type"
+                    id="select-type"
+                    value="С печатью"
+                  />
+                  <div class="select form__select">
+                    <div class="select_checked">С печатью</div>
+                    <ul class="select__dropdown">
+                      <li class="select__option" data-value="С печатью">
+                        С печатью
+                      </li>
+                      <li class="select__option" data-value="Без печати">
+                        Без печати
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="form__group">
                   <lable class="form__label"> Ширина, см</lable>
-                  <input type="text" class="input form__input" />
+                  <input type="number" class="input form__input" />
                 </div>
                 <div class="form__group">
                   <lable class="form__label"> Высота, см</lable>
-                  <input type="text" class="input form__input" />
+                  <input type="number" class="input form__input" />
                 </div>
               </div>
               <div class="form__row form__row-checkbox">
@@ -634,6 +651,42 @@
         <!-- /.container -->
       </section>
       <!-- /.section price -->
+      <section class="section before">
+        <div class="container">
+          <h2 class="section-title section__title">До и после</h2>
+          <div class="before-slider-wrap">
+            <div class="before-slider">
+              <div class="before-slider__item">
+                <div class="before-after">
+                  <img src="img/before-slider/before.jpg" alt="" />
+                  <img src="img/before-slider/after.jpg" alt="" />
+                </div>
+              </div>
+              <div class="before-slider__item">
+                <div class="before-after">
+                  <img src="img/before-slider/before.jpg" alt="" />
+                  <img src="img/before-slider/after.jpg" alt="" />
+                </div>
+              </div>
+              <div class="before-slider__item">
+                <div class="before-after">
+                  <img src="img/before-slider/before.jpg" alt="" />
+                  <img src="img/before-slider/after.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="before-slider-arrows">
+              <button class="arrow arrow-left">
+                <img src="img/before-slider/left.png" alt="" />
+              </button>
+              <button class="arrow arrow-left">
+                <img src="img/before-slider/right.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- /.before-slider-wrap -->
+        </div>
+      </section>
       <section class="section steps">
         <div class="container">
           <div class="h2 section-title section__title">Этапы работ</div>
@@ -791,7 +844,7 @@
                 </div>
                 <div class="form__group">
                   <input
-                    type="text"
+                    type="tel"
                     class="input form__input"
                     placeholder="Ваш телефон"
                   />
@@ -982,5 +1035,11 @@
       type="text/javascript"
       src="https://spikmi.org/Widget?Id=20100"
     ></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
   </body>
 </html>
