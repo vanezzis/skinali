@@ -32,4 +32,16 @@ $(window).load(function () {
     return false;
   });
   $("[type='tel']").mask("+7 (999)-99-99");
+  /* Показывать карту, только тогда, когда до нее докрутили */
+  var reviews = $(".reviews");
+  var reviewsTop = reviews.offset().top;
+  $(window).bind("scroll", function () {
+    var windowTop = $(this).scrollTop();
+    if (windowTop > reviewsTop) {
+      $("#map").html(
+        '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5f920e1492dfb2cb7fc68f815a651cff263f40040b01f3fda1b057e10770e991&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>'
+      );
+      $(window).unbind("scroll");
+    }
+  });
 });
